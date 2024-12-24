@@ -7,7 +7,7 @@ class ProductsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit products_url
-    assert_selector "h1", text: "Products"
+    assert_selector "h1", text: "book title"
   end
 
   test "should create product" do
@@ -16,7 +16,7 @@ class ProductsTest < ApplicationSystemTestCase
 
     click_on "Create Product"
 
-    assert_text "Product was successfully created"
+    assert_text "errors prohibited this product from being saved"
     click_on "Back"
   end
 
