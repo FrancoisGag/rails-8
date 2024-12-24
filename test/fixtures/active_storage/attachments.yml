@@ -1,0 +1,4 @@
+valid_book_image:
+  name: image
+  record: valid_book (Product)
+  blob: valid_book_image_blob
