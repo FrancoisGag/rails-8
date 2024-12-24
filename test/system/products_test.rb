@@ -27,7 +27,7 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "product_title", with: "new title"
     fill_in "product_description", with: "new description"
     fill_in "product_price", with: 10
-    attach_file "product_image", "/test/fixtures/files/lorem.jpg"
+    attach_file "product_image", "test/fixtures/files/lorem.jpg"
     click_on "Create Product"
 
     assert_text "errors prohibited this product from being saved"
