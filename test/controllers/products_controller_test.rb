@@ -21,7 +21,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         title: "The great title #{rand(1000)}",
         description: "description",
         price: 1,
-        image: file_fixture_upload('lorem.jpg', 'image/jpg')
+        image: file_fixture_upload("lorem.jpg", "image/jpg")
       } }
     end
 
@@ -39,7 +39,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update product" do
-    patch product_url(@product), params: { product: { title: "The great title #{rand(1000)}"} }
+    patch product_url(@product), params: { product: { title: "The great title #{rand(1000)}" } }
     assert_redirected_to product_url(@product)
   end
 
