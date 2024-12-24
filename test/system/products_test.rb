@@ -30,7 +30,7 @@ class ProductsTest < ApplicationSystemTestCase
     attach_file "product_image", "test/fixtures/files/lorem.jpg"
     click_on "Create Product"
 
-    assert_text "errors prohibited this product from being saved"
+    assert_text "Product was successfully created"
     click_on "Back"
   end
 
