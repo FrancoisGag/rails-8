@@ -10,10 +10,24 @@ class ProductsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "book title"
   end
 
+  test "should not create product" do
+    visit products_url
+    click_on "New product"
+
+    click_on "Create Product"
+
+    assert_text "errors prohibited this product from being saved"
+    click_on "Back"
+  end
+
   test "should create product" do
     visit products_url
     click_on "New product"
 
+    fill_in "product_title", with: "new title"
+    fill_in "product_description", with: "new description"
+    fill_in "product_price", with: 10
+    attach_file "product_image", "/test/fixtures/files/lorem.jpg"
     click_on "Create Product"
 
     assert_text "errors prohibited this product from being saved"
